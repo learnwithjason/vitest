@@ -5,7 +5,18 @@ describe('loadUserDetails', () => {
   test('loads user data as expected', async () => {
     const user = await loadUserData('antfu7');
 
-    expect(user).toMatchSnapshot();
+    expect(user).toMatchInlineSnapshot(`
+      {
+        "coolness": 100,
+        "favoriteFood": "sushi",
+        "name": "Anthony",
+        "projects": [
+          "vitest",
+          "vite",
+        ],
+        "username": "antfu7",
+      }
+    `);
   });
 
   test('sets coolness level appropriately', async () => {
