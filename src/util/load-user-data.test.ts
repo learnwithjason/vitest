@@ -14,6 +14,7 @@ describe('loadUserDetails', () => {
           "vitest",
           "vite",
         ],
+        "snacks": true,
         "username": "antfu7",
       }
     `);
